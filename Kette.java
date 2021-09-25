@@ -2,7 +2,7 @@ public class Kette {
 
     private int anzahl;                   // Anzahl der Lampen in der Kette
     private Lampe[] kette;                // Feld mit den Lampen
-    private String farbeNaechsteLampe;    // Farbe der naechsten Lampe
+    private String farbe;    // Farbe der naechsten Lampe
 
     /**
      *   Konstruktor initialisiert Feld für 10 Lampen,
@@ -11,7 +11,7 @@ public class Kette {
     public Kette() {
         this.kette = new Lampe[10];        
         this.anzahl = 0;
-        this.farbeNaechsteLampe = "rot";        
+        this.farbe = "rot";        
     }
 
     /**
@@ -23,15 +23,15 @@ public class Kette {
             /**
              *  Neue Lampe nur dann, wenn noch keine 10 Lampen vorhanden sind.
              */
-            this.kette[anzahl] = new Lampe(10 + this.anzahl * 10, 100, farbeNaechsteLampe);
+            this.kette[anzahl] = new Lampe(10 + this.anzahl * 10, 100, farbe);
             this.anzahl = this.anzahl + 1;
             /**
              *  Farbwechsel
              */
-            if (this.farbeNaechsteLampe == "rot") {
-                this.farbeNaechsteLampe = "weiss";
+            if (this.farbe == "rot") {
+                this.farbe = "weiss";
             } else {
-                this.farbeNaechsteLampe = "rot";
+                this.farbe = "rot";
             }
         }
     }
